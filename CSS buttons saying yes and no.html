@@ -1,0 +1,67 @@
+<style>
+h1 {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+.button {
+    margin: 0 10px;
+    border: none;
+    color: #75dae7;
+    font-weight: bold;
+    background-color: #7b55c2;
+    background-image: linear-gradient(90deg, #7b55c2 0%, #75dae7 100%);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.yes {
+    animation: yes 1s ease-in-out infinite;
+}
+
+.yes:hover {
+    cursor: pointer;
+}
+
+.no {
+    animation: no 1s ease-in-out infinite;
+}
+
+.no:hover {
+    cursor: not-allowed;
+}
+
+@keyframes no {
+    50% {
+        transform: matrix3d(1, 0, 0, 0.005, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  75% {
+    transform: matrix3d(1, 0, 0, -0.005, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+@keyframes yes {
+  50% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0.005, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  75% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0.005, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+</style>
+
+<html> 
+  <h1>
+    Css Button saying yes/no
+  </h1>
+  <div class="buttons-container">
+    <button class="button yes">Yes</button>
+    <button class="button no">No</button>
+  </div>
+</html>
+
